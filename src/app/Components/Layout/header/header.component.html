@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        routerLink=""
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home/Service']" routerLinkActive="active">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/Gallery" routerLinkActive="active">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/About" routerLinkActive="active">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home/Contact" routerLinkActive="active">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
