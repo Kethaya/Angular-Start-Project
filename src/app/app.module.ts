@@ -15,6 +15,7 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { ErrorPageComponent } from './Components/error-page/error-page.component';
 import { UsersComponent } from './Components/users/users.component';
 import { UserComponent } from './Components/user/user.component';
+import { userService } from './Components/users/services/users.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { UserComponent } from './Components/user/user.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [userService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

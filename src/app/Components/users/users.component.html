@@ -1,32 +1,12 @@
 <div class="row mx-3 py-3">
   <ul class="list-group">
-    <li
+    <li *ngFor="let user of userList; index as i"
       class="list-group-item"
-      [routerLink]="['/home/User/U001/Dwayne Johnson']"
-      [queryParams]="{status: 'Active'}"
+      [routerLink]="['/home/User',user.id,user.name]"
+      [queryParams]="{status: user.status}"
     >
-      U001 - Dwayne Johnson
+      {{i+1}}. {{user.id}} - {{user.name}}
     </li>
-    <li class="list-group-item" 
-    [routerLink]="['/home/User/U002/Vin Diesel']"
-    [queryParams]="{status: 'Inactive'}"
-    >
-      U002 - Vin Diesel
-    </li>
-    <li class="list-group-item" [routerLink]="['/home/User/U003/Will Smith']">
-      U003 - Will Smith
-    </li>
-    <li
-      class="list-group-item"
-      [routerLink]="['/home/User/U004/Robert Downey Jr.']"
-    >
-      U004 - Robert Downey Jr.
-    </li>
-    <li
-      class="list-group-item"
-      [routerLink]="['/home/User/U005/Chris Hemsworth']"
-    >
-      U005 - Chris Hemsworth
-    </li>
+    
   </ul>
 </div>
