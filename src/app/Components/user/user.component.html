@@ -1,0 +1,14 @@
+<div class="row mx-3 py-3" *ngIf="userId !== 'null'">
+  <div class="py-2">
+    <div *ngIf="status === 'Active'" class="badge text-bg-success">Active</div>
+    <div *ngIf="status === 'Inactive'" class="badge text-bg-danger">Hold</div>
+
+  </div>
+    <p class="m-0 py-0">User Id: {{userId}}</p>
+    <h4>User name is {{userName}}</h4>
+  </div>
+
+
+  <div *ngIf="userId == 'null'" class="alert alert-warning" role="alert">
+    Please select a user!
+  </div>

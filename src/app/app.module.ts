@@ -13,6 +13,8 @@ import { GalleryComponent } from './Components/gallery/gallery.component';
 import { AboutComponent } from './Components/about/about.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { ErrorPageComponent } from './Components/error-page/error-page.component';
+import { UsersComponent } from './Components/users/users.component';
+import { UserComponent } from './Components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ErrorPageComponent } from './Components/error-page/error-page.component
     GalleryComponent,
     AboutComponent,
     ContactComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

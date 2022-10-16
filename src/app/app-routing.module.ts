@@ -8,6 +8,8 @@ import { GalleryComponent } from './Components/gallery/gallery.component';
 import { HomeComponent } from './Components/home/home.component';
 import { ContentComponent } from './Components/Layout/content/content.component';
 import { ServiceComponent } from './Components/service/service.component';
+import { UserComponent } from './Components/user/user.component';
+import { UsersComponent } from './Components/users/users.component';
 
 const routes: Routes = [
   {path: '', component: AuthComponent},
@@ -15,7 +17,14 @@ const routes: Routes = [
     path: 'home',
      component: ContentComponent,
      children: [
-      {path: '', component: HomeComponent},
+      {
+        path: '',
+       component: HomeComponent,
+       children: [
+        {path: '', component: UsersComponent},
+        {path: 'User/:id/:name', component: UserComponent}
+       ]
+       },
       {path: 'Service', component: ServiceComponent},
       {path: 'Gallery', component: GalleryComponent},
       {path: 'About', component: AboutComponent},
